@@ -1,18 +1,40 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
-
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+import { Container, Text, VStack, Box, Heading, SimpleGrid } from "@chakra-ui/react";
 
 const Index = () => {
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
-      </VStack>
+    <Container maxW="container.xl" py={10}>
+      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
+        <Box gridColumn={{ md: "span 2" }}>
+          <Heading as="h1" mb={4}>Main News Section</Heading>
+          <VStack spacing={4} align="start">
+            <Box>
+              <Heading as="h2" size="md">Headline 1</Heading>
+              <Text>Summary of the news article goes here...</Text>
+            </Box>
+            <Box>
+              <Heading as="h2" size="md">Headline 2</Heading>
+              <Text>Summary of the news article goes here...</Text>
+            </Box>
+            <Box>
+              <Heading as="h2" size="md">Headline 3</Heading>
+              <Text>Summary of the news article goes here...</Text>
+            </Box>
+          </VStack>
+        </Box>
+        <Box>
+          <Heading as="h2" size="lg" mb={4}>Sidebar</Heading>
+          <VStack spacing={4} align="start">
+            <Box>
+              <Heading as="h3" size="md">Additional Content 1</Heading>
+              <Text>Details about additional content...</Text>
+            </Box>
+            <Box>
+              <Heading as="h3" size="md">Additional Content 2</Heading>
+              <Text>Details about additional content...</Text>
+            </Box>
+          </VStack>
+        </Box>
+      </SimpleGrid>
     </Container>
   );
 };
